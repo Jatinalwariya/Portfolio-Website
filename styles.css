@@ -117,6 +117,15 @@ section{
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
 }
+
+.image img {
+    width: 100%; /* Ensure the image scales to fit the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Ensures the circular appearance */
+    object-fit: cover; /* Ensures the image doesn't stretch or get clipped */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better visibility */
+}
+
 @keyframes animate {
     0%{
         scale: 1;
