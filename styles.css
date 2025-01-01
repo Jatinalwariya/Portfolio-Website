@@ -1,4 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#home {
+    padding-top: 10vh; 
+}
+
+#about, #skills, #contact {
+    padding-top: 10vh;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -93,9 +126,15 @@ nav{
 .dropdown .links a:hover{
     background-color: #077b32;
 }
-section{
+
+section {
     width: 100%;
-    height: 90vh;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .main-container{
     width: 100%;
@@ -116,14 +155,6 @@ section{
 }
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
-}
-
-.image img {
-    width: 100%; /* Ensure the image scales to fit the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Ensures the circular appearance */
-    object-fit: cover; /* Ensures the image doesn't stretch or get clipped */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better visibility */
 }
 
 @keyframes animate {
@@ -202,6 +233,153 @@ section{
     font-weight: 700;
     box-shadow: 0 0 40px #077b32;
 }
+
+/* About section */
+#about{
+    padding-top: 80px;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+}
+
+.about-container{
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeup 1.5 ease-in-out;
+}
+
+.about-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.about-container p{
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+#skills {
+    background-color: #121212; 
+    color: white; 
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #077b32; 
+    text-shadow: 0 0 10px #077b32;
+}
+
+.skills-container p {
+    font-size: 1.2rem;
+    margin: 10px 0 30px; 
+    color: #ddd; 
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: #1e1e1e; 
+    border: 1px solid #077b32; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px #077b32;
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: #077b32; 
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #bbb; 
+}
+/* Contact Section Styling */
+#contact {
+    background-color: #121212;
+    padding: 50px 20px;
+    color: white;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
 @media (max-width:884px) {
     nav .logo{
         position: absolute;
@@ -247,3 +425,5 @@ section{
         margin-top: 15px;
     }
 }
+
+
